@@ -3,6 +3,39 @@
   "version": "0.0.0",
   "main": "lib/index.js",
   "repository": "git@github.com:folio-sec/redux-spork.git",
-  "author": "Daisuke Mino <dmino@folio-sec.com>",
-  "license": "Apache-2.0"
+  "author": "Daisuke Mino <daisuke.mino@gmail.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "yarn format:test && jest",
+    "format": "prettier --write src/**",
+    "format:test": "prettier -l src/**",
+    "prepublish": ""
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "flow-bin": "^0.70.0",
+    "flow-typed": "^2.4.0",
+    "jest": "21.2.1",
+    "prettier": "^1.12.1",
+    "rax-server-renderer": "^0.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-reconciler": "^0.10.0",
+    "react-redux": "^5.0.7",
+    "recompose": "^0.27.0",
+    "redux": "^4.0.0"
+  }
 }
