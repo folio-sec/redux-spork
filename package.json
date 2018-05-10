@@ -1,15 +1,18 @@
 {
   "name": "redux-spork",
-  "version": "0.0.0",
-  "main": "lib/index.js",
+  "version": "0.0.1",
   "repository": "git@github.com:folio-sec/redux-spork.git",
   "author": "Daisuke Mino <daisuke.mino@gmail.com>",
   "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
+    "build": "rm -rf lib && flow-remove-types -d lib src && yarn flow-copy-source src lib && yarn prettier --write lib/**",
     "test": "yarn format:test && jest",
     "format": "prettier --write src/**",
-    "format:test": "prettier -l src/**",
-    "prepublish": ""
+    "format:test": "prettier -l src/**"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -27,6 +30,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "flow-bin": "^0.70.0",
+    "flow-copy-source": "^1.3.0",
+    "flow-remove-types": "^1.2.3",
     "flow-typed": "^2.4.0",
     "jest": "21.2.1",
     "prettier": "^1.12.1",
