@@ -1,6 +1,6 @@
 {
   "name": "redux-spork",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "git@github.com:folio-sec/redux-spork.git",
   "author": "Daisuke Mino <daisuke.mino@gmail.com>",
   "license": "Apache-2.0",
@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "rm -rf lib && flow-remove-types -d lib src && yarn flow-copy-source src lib && yarn prettier --write lib/**",
+    "prepublish": "yarn build",
     "test": "yarn format:test && jest",
     "format": "prettier --write src/**",
     "format:test": "prettier -l src/**"
