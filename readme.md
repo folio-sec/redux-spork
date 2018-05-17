@@ -1,1 +1,1 @@
-# redux-spork [![CircleCI](https://circleci.com/gh/folio-sec/redux-spork/tree/master.svg?style=svg)](https://circleci.com/gh/folio-sec/redux-spork/tree/master)
+# redux-spork [![CircleCI](https://circleci.com/gh/folio-sec/redux-spork/tree/master.svg?style=svg)](https://circleci.com/gh/folio-sec/redux-spork/tree/master) [![codecov.io](https://codecov.io/github/folio-sec/redux-spork/coverage.svg?branch=master)](https://codecov.io/github/folio-sec/redux-spork?branch=master)
