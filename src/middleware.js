@@ -25,7 +25,7 @@ export const createMiddleware = ({ error = console.error }: Options = {}) => {
 
   let merges = {};
   const merge = <A: { type: string }>(
-    type: $PropertyType<A, "type">,
+    type: $PropertyType<A, "type">
   ): Promise<A> =>
     new Promise(resolve => {
       if (!merges[type]) {
@@ -36,7 +36,7 @@ export const createMiddleware = ({ error = console.error }: Options = {}) => {
 
   let running = 0;
   const middleware = ({ getState }: { getState: () => any }) => (
-    next: (action: { type: string }) => void,
+    next: (action: { type: string }) => void
   ) => {
     const dispatch = (action: { type: string }) => {
       next(action);
