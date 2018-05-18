@@ -40,6 +40,5 @@
     "jest": "21.2.1",
     "prettier": "^1.12.1",
     "redux": "^4.0.0"
-  },
-  "dependencies": {}
+  }
 }

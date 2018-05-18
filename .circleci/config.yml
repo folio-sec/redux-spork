@@ -1,11 +1,10 @@
 version: 2
+
 jobs:
   build:
     docker:
       - image: circleci/node:8.11
-
     working_directory: ~/redux-spork
-
     steps:
       - checkout
 
@@ -23,3 +22,36 @@ jobs:
 
       - run: yarn test
       - run: yarn codecov
+
+  publish:
+    docker:
+      - image: circleci/node:8.11
+    working_directory: ~/redux-spork
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn publish --no-git-tag-version --new-version $CIRCLE_TAG
+
+workflows:
+  version: 2
+  build-and-publish:
+    jobs:
+      - build
+      - publish:
+        requires:
+          - build
+        filters:
+          tags:
+            only: /\d+\.\d+\.\d+/
