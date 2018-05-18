@@ -2,9 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8.11
 
-    working_directory: ~/repo
+    working_directory: ~/redux-spork
 
     steps:
       - checkout
@@ -21,6 +21,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn build
       - run: yarn test
       - run: yarn codecov

@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rm -rf lib && yarn babel -d lib src && yarn flow-copy-source src lib && yarn prettier --write lib/**",
     "prepublish": "yarn build",
-    "test": "yarn eslint src && yarn build && yarn format:test && jest",
+    "test": "yarn eslint src && yarn format:test && jest",
     "format": "prettier --write src/**",
     "format:test": "prettier -l src/**"
   },

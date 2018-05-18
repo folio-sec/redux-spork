@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const spork = require("../../redux-spork");
+const spork = require("..");
 
 describe("redux-spork", () => {
   it("exports 2 property", () => {
