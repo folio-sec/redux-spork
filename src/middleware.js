@@ -16,9 +16,15 @@
 
 // @flow
 
-import type { Spork, Options } from "./types";
+import type {
+  Spork,
+  Options,
+  createMiddleware as createMiddlewareType
+} from "redux-spork";
 
-export const createMiddleware = ({ error = console.error }: Options = {}) => {
+export const createMiddleware: createMiddlewareType = ({
+  error = console.error
+}: Options = {}) => {
   let disabled = false;
   let map;
   let resolveDone: ?() => void;

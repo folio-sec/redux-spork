@@ -61,7 +61,7 @@ describe("spork", () => {
           fork("FOO", ({ getState }) => {
             const state = getState();
             expect(state).toEqual({ bar: 100 });
-          }),
+          })
         ]);
 
         passAction({ type: "FOO" });
