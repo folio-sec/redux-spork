@@ -16,7 +16,7 @@
 
 // @flow
 
-import type { Callback, Spork } from "./types";
+import type { Callback, Spork } from "redux-spork";
 
 export const fork = <A: { type: string }>(
   type: $PropertyType<A, "type">,
