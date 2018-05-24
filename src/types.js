@@ -16,12 +16,24 @@
 
 // @flow
 
-import type { Action, Callback, Spork } from "./types";
+import type { Dispatch } from "redux";
 
-export const fork = <A: Action>(
+export type Options = {
+  error?: (err: any) => void
+};
+
+export type Action = { type: any };
+
+export type Merge = <A: Action>(type: $PropertyType<A, "type">) => Promise<A>;
+
+export type Callback<A: Action> = ({
+  action: A,
+  dispatch: Dispatch<any>,
+  merge: Merge,
+  getState: () => any
+}) => any | Promise<any>;
+
+export type Spork<A: Action> = {
   type: $PropertyType<A, "type">,
   callback: Callback<A>
-): Spork<A> => ({
-  type,
-  callback
-});
+};

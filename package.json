@@ -12,12 +12,13 @@
     "prepublish": "yarn build",
     "build": "rm -rf lib && yarn build:babel && yarn build:type && yarn build:format",
     "build:babel": "yarn babel -d lib --ignore *.test.js src",
-    "build:type": "cp type/flow/* lib",
-    "build:format": "yarn prettier --write lib/**/*.js",
+    "build:type": "flow-copy-source src lib",
+    "build:format": "yarn prettier --write lib/**/*",
+    "pretest": "yarn build",
     "test": "yarn test:lint && yarn test:format && jest",
-    "test:lint": "yarn eslint src",
-    "test:format": "prettier -l src/**",
-    "format": "prettier --write src/**"
+    "test:lint": "yarn eslint src __tests__",
+    "test:format": "prettier -l src/** __tests__/**",
+    "format": "prettier --write src/** __tests__/**"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -39,6 +40,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "flow-bin": "^0.70.0",
+    "flow-copy-source": "^1.3.0",
     "flow-typed": "^2.4.0",
     "jest": "21.2.1",
     "prettier": "^1.12.1",
