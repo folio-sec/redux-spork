@@ -40,7 +40,7 @@ export const createMiddleware = (
     });
 
   let running = 0;
-  const middleware = ({ getState }: { getState: () => any }) => (
+  const middleware = ({ getState }) => (
     next: (action: { type: string }) => void
   ) => {
     const dispatch = (action: { type: string }) => {
