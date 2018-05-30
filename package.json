@@ -10,10 +10,9 @@
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "rm -rf lib && yarn build:babel && yarn build:type && yarn build:format",
+    "build": "rm -rf lib && yarn build:babel && yarn build:type",
     "build:babel": "yarn babel -d lib --ignore *.test.js src",
     "build:type": "flow-copy-source src lib",
-    "build:format": "yarn prettier --write lib/**/*",
     "pretest": "yarn build",
     "test": "yarn test:lint && yarn test:format && jest",
     "test:lint": "yarn eslint src __tests__",
@@ -27,8 +26,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
     "codecov": "^3.0.2",
     "eslint": "^4.19.1",
