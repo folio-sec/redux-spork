@@ -1,6 +1,6 @@
 {
   "name": "redux-spork",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "repository": "git@github.com:folio-sec/redux-spork.git",
   "author": "Daisuke Mino <daisuke.mino@gmail.com>",
   "license": "Apache-2.0",
