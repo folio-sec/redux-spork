@@ -30,7 +30,7 @@ export type Callback<A: Action> = ({
   action: A,
   dispatch: Dispatch<any>,
   merge: Merge,
-  getState: () => any
+  getState: (key: string) => any
 }) => any | Promise<any>;
 
 export type Spork<A: Action> = {
