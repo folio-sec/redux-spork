@@ -1,0 +1,49 @@
+body {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+ul {
+  display: table;
+  padding: 0;
+}
+
+li {
+  display: table-row;
+}
+
+li p {
+  display: table-cell;
+  padding: 4px 4px;
+}
+
+.price,
+.change,
+.changePercent {
+  text-align: right;
+}
+
+.up .change,
+.up .changePercent,
+.up .arrow {
+  color: green;
+}
+
+.down .change,
+.down .changePercent,
+.down .arrow {
+  color: red;
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.unit {
+  font-size: 60%;
+}
+
+.disclaimer {
+  color: gray;
+  font-size: 10px;
+}

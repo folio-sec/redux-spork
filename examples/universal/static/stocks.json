@@ -1,0 +1,37 @@
+[
+  {
+    "symbol": "FBX",
+    "companyName": "Facebox Inc.",
+    "price": 142.16,
+    "change": 0.61,
+    "changePercent": 0.431
+  },
+  {
+    "symbol": "AMZE",
+    "companyName": "Amazone Inc.",
+    "price": 1631.17,
+    "change": -5.68,
+    "changePercent": -0.347
+  },
+  {
+    "symbol": "APLX",
+    "companyName": "Applex Inc.",
+    "price": 192.23,
+    "change": -1.94,
+    "changePercent": -0.999
+  },
+  {
+    "symbol": "YFLX",
+    "companyName": "Yetflix Inc.",
+    "price": 294.4,
+    "change": 0.33,
+    "changePercent": 0.112
+  },
+  {
+    "symbol": "GOGA",
+    "companyName": "Alphabed Inc.",
+    "price": 1036.05,
+    "change": -2.58,
+    "changePercent": -0.248
+  }
+]
