@@ -5,7 +5,7 @@ Runs in client(browser).
 ## Setup
 
 ```
-yarn install
+yarn
 ```
 
 ### Run server
@@ -15,9 +15,3 @@ yarn development
 ```
 
 Open [http://localhost:8080](http://localhost:8080).
-
-### Build
-
-```
-yarn build
-```
