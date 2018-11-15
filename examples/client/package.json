@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "develop": "yarn webpack-dev-server"
+    "start": "yarn webpack-dev-server"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",

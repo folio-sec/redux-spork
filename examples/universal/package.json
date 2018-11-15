@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "develop": "yarn webpack -w & yarn nodemon dist/server/index.js"
+    "start": "rm -rf dist && yarn webpack -w"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -23,7 +23,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "express": "^4.16.4",
-    "nodemon": "^1.18.6",
+    "nodemon-webpack-plugin": "^3.0.1",
     "recompose": "^0.30.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"

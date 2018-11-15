@@ -11,7 +11,7 @@ yarn
 ### Run server
 
 ```
-yarn development
+yarn start
 ```
 
 Open [http://localhost:8080](http://localhost:8080).
