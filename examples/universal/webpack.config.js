@@ -1,3 +1,4 @@
+const NodemonPlugin = require("nodemon-webpack-plugin");
 const { join } = require("path");
 
 module.exports = [
@@ -21,6 +22,7 @@ module.exports = [
     resolve: {
       extensions: [".js", ".jsx"],
     },
+    plugins: [new NodemonPlugin()],
   },
   {
     entry: join(__dirname, "src/client/index.jsx"),
